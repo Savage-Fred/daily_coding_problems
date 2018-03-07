@@ -7,11 +7,16 @@
 # trivially solvable with division since result[i] is the input.prod() / input[i]
 # bruteforce would be O(n^2)
 
+
+example1 = [1,2,3,4,5]
+
 from functools import reduce
 from operator import mul
 
+# Method using reduce
+# Unsure of compexity, but I have a feeling it is O(n^2) 
 def arraymult(arr):
 	return [reduce(mul, arr[:i] +arr[i+1:], 1) for i in xrange(len(arr))]
 
-example1 = [1,2,3,4,5]
+
 print arraymult(example1)
