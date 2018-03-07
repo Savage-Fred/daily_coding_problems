@@ -18,3 +18,12 @@ def checkforsum(arr, k):
 				if i + j == k and i!=j:
 					return i,j
 		return False
+
+
+def checkforsum_hash(arr,k):
+	value_to_index = {}
+	for i, num in enumerate(arr):
+		value_to_index[num] = i
+	for i, num in enumerate(arr):
+		if (k-num) in value_to_index and i != value_to_index[k-num]:
+			return True
