@@ -15,8 +15,6 @@ def checkforsum(arr, k):
 			continue
 		else:
 			for j in arr:
-				if i + j == k:
+				if i + j == k and i!=j:
 					return i,j
 		return False
-
-print(checkforsum([5,10,1,2,3,4], 9))
